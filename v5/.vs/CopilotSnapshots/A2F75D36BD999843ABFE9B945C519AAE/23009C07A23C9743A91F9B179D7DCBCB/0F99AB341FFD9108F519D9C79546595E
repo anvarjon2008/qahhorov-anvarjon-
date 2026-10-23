@@ -1,0 +1,56 @@
+﻿using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        const string message = "ruixati donishjuho!";
+        Console.WriteLine(message);
+        string [] name;
+        int donishjuho = 20;
+        int ball,guzasht,galtid;
+        guzasht = 0;
+        galtid = 0;
+        for (int i = 0; i < donishjuho; i++)
+        {
+            Console.WriteLine("nomi donishju");
+            name = Console.ReadLine().Split(' ');
+            Console.WriteLine("balli donishju");
+            ball = int.Parse(Console.ReadLine());
+            if (ball < 0 || ball > 100)
+            {
+                Console.WriteLine("xato vorid shud");
+                               continue;
+            }
+            if (ball >= 90)
+            {
+                Console.WriteLine(name[i]+" A alo");
+                guzasht++;
+            }
+            else if (ball >= 80)
+            {
+                Console.WriteLine(name[i] + " b xub");
+                guzasht++;
+            }
+            else if (ball >= 70)
+            {
+                Console.WriteLine(name[i] + "C qanoatbaxsh");
+                guzasht++;
+            }
+            else if (ball >= 60)
+            {
+                Console.WriteLine(name[i] + "d pas");
+                guzasht++;
+            }
+            else
+            {
+                Console.WriteLine(name[i] + "galtid F");
+                galtid++;
+            }
+
+        }
+        Console.WriteLine("guzasht: " + guzasht+"donishjuho");
+        Console.WriteLine("galtid: " + galtid+"donishjuho");
+
+
+    }
+}

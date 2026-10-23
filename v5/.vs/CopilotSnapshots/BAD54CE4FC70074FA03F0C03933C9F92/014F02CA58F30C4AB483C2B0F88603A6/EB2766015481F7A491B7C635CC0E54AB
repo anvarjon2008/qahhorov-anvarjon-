@@ -1,0 +1,22 @@
+﻿using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        const string message = "ruixati donishjuho!";
+        Console.WriteLine(message);
+        int donishjuho = 20;
+        for (int i = 0; i < donishjuho; i++)
+        {
+            Console.WriteLine("nomi donishju");
+            string name = Console.ReadLine() ?? string.Empty;
+            Console.WriteLine("balli donishju");
+            if (!int.TryParse(Console.ReadLine(), out int ball) || ball < 0 || ball > 100)
+            {
+                Console.WriteLine("Invalid ball value!");
+                i--;
+            }
+        }
+
+    }
+}

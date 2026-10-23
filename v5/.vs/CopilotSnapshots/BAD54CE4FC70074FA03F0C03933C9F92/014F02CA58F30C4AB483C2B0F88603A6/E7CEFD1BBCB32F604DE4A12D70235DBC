@@ -1,0 +1,24 @@
+﻿using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        const string message = "ruixati donishjuho!";
+        Console.WriteLine(message);
+        string [] name;
+        int donishjuho = 20;
+        int ball;
+        for (int i = 0; i < donishjuho; i++)
+        {
+            Console.WriteLine("nomi donishju");
+            name = Console.ReadLine().Split(' ');
+            Console.WriteLine("balli donishju");
+            ball = int.Parse(Console.ReadLine());
+        }
+        if ( ball <0 || ball>100)
+        {
+            Console.WriteLine("Invalid ball value!");
+        }
+
+    }
+}
